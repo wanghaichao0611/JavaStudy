@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <!--0.加载properties文件信息-->
+    <context:property-placeholder location="classpath:Spring事务管理/db.properties"/>
+    <!--1.配置数据源-->
+    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+        <!--数据库驱动-->
+        <property name="driverClass" value="${jdbc.driverClass}"/>
+        <!--连接数据库的URL-->
+        <property name="jdbcUrl" value="${jdbc.jdbcUrl}"/>
+        <!--连接数据库的用户名-->
+        <property name="user" value="${jdbc.user}"/>
+        <!--连接数据库的密码-->
+        <property name="password" value="${jdbc.password}"/>
+        <!--将jdbcTemplate对象注入到userDao实现类中-->
+    </bean>
+    <!--2.配置JDBC模板-->
+    <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+        <!--默认必须使用数据源-->
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+    <!--3.配置Dao-->
+    <bean id="accountDao" class="Spring事务管理.AccountDaoImpl">
+        <property name="jdbcTemplate" ref="jdbcTemplate"/>
+    </bean>
+    <!--4.配置Service-->
+    <bean id="accountService" class="Spring事务管理.AccountServiceImpl">
+        <property name="accountDao" ref="accountDao"/>
+    </bean>
+    <!--#1事务管理器,依赖于数据源-->
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+    <!--编写通知：对事务进行增强（通知），需要编写对切入点和具体执行事务细节-->
+    <tx:advice id="txAdvice" transaction-manager="transactionManager">
+        <tx:attributes>
+            <!--给切入点方法添加事务详情 name：方法名称 *表示任意发放名称，
+            save*以save开头propagetion：设置传播行为 isolation：隔离级别 read-only：是否只读-->
+            <tx:method name="*" propagation="REQUIRED" isolation="DEFAULT" read-only="false"/>
+        </tx:attributes>
+    </tx:advice>
+    <!--aop编写，让Spring自动对目标生成代理，需要使用AspectJ表达式-->
+    <aop:config>
+        <!--切入点-->
+        <aop:pointcut id="txPointCut" expression="execution(* Spring事务管理.*.*(..))"/>
+        <!--切面：将切入点与通知整合-->
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="txPointCut"/>
+    </aop:config>
+</beans>

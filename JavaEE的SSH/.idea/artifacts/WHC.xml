@@ -1,0 +1,23 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="WHC">
+    <output-path>$PROJECT_DIR$/out/artifacts/WHC</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="无敌SSH" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Spring" />
+          <element id="library" level="project" name="Hibernate" />
+          <element id="library" level="application" name="mysql-connector-java-8.0.16" />
+          <element id="library" level="application" name="Junit" />
+          <element id="library" level="application" name="struts2" />
+          <element id="library" level="application" name="aspectJ" />
+          <element id="library" level="application" name="数据库封装池" />
+          <element id="library" level="application" name="aopalliance-1.0.0" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="无敌SSH/web/Web" />
+    </root>
+  </artifact>
+</component>

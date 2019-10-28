@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+<!--1.配置SessionFactory-->
+    <bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+<!--加载Hibernate核心配置文件-->
+        <property name="configLocation" value="hibernate.cfg.xml"></property>
+    </bean>
+    <!--2.配置Hibernate模板-->
+    <bean id="hibernateTemplate" class="org.springframework.orm.hibernate3.HibernateTemplate">
+        <!--通过工厂获得Session，操作PO类-->
+        <property name="sessionFactory" ref="sessionFactory"></property>
+    </bean>
+    <!--配置Dao-->
+    <bean id="userDao" class="SSH框架整合.UserDaoImpl">
+        <property name="hibernateTemplate" ref="hibernateTemplate"></property>
+    </bean>
+    <!--配置Service-->
+    <bean id="userService" class="SSH框架整合.UserServiceImpl">
+        <property name="userDao" ref="userDao"></property>
+    </bean>
+    <!--事务管理:事务管理器是，就是平台Spring工具产生，依赖于使用持久方案-->
+    <bean id="txManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sessionFactory">
+        </property>
+    </bean>
+    <!--#2通知：增强事务-->
+    <tx:advice id="txAdvice" transaction-manager="txManager">
+        <tx:attributes>
+            <tx:method name="save*"/>
+            <tx:method name="update*"/>
+            <tx:method name="delete*"/>
+            <tx:method name="find*" read-only="true"/>
+        </tx:attributes>
+    </tx:advice>
+    <!--#3 切面:将切入点与通知关联-->
+    <aop:config>
+        <aop:advisor advice-ref="txAdvice" pointcut="execution(* SSH框架整合.*.*(..))"/>
+    </aop:config>
+    <bean id="userAction" class="SSH框架整合.UserAction" scope="prototype">
+        <property name="userService" ref="userService"></property>
+    </bean>
+</beans>

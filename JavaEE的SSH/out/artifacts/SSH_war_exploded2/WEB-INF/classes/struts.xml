@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+    <constant name="struts.enable.DynamicMethodInvocation" value="true" />
+    <package name="注册" extends="struts-default">
+        <action name="zc" class="cn.itcast.注册.注册控制页面">
+            <result name="success">/简单的登录系统/success.jsp</result>
+            <result name="error">/简单的登录系统/注册.jsp</result>
+            <result name="input">/简单的登录系统/注册.jsp</result>
+        </action>
+        <action name="dl" class="cn.itcast.注册.登录控制页面">
+            <result name="success">/简单的登录系统/success.jsp</result>
+            <result name="error">/简单的登录系统/个人信息的登录.jsp</result>
+            <result name="input">/简单的登录系统/个人信息的登录.jsp</result>
+        </action>
+    </package>
+    <package name="开始" extends="struts-default">
+        <interceptors>
+            <interceptor name="privilege" class="cn.itcast.interceptor.PrivilegeInterceptor"/>
+            <interceptor-stack name="myStack">
+                <interceptor-ref name="defaultStack"/>
+                <interceptor-ref name="privilege"/>
+            </interceptor-stack>
+        </interceptors>
+        <action name="login" class="cn.itcast.action.LoginAction1">
+            <result>/自定义拦截器/main.jsp</result>
+            <result name="input">/自定义拦截器/login.jsp</result>
+        </action>
+        <action name="book_*" class="cn.itcast.action.BookAction">
+            <result>/自定义拦截器/success.jsp</result>
+            <result name="login">/自定义拦截器/login.jsp</result>
+            <interceptor-ref name="myStack"/>
+        </action>
+    </package>
+    <!--开发者模式-->
+    <constant name="struts.devMode" value="true"></constant>
+    <constant name="struts.objectFactory" value="spring"/>
+    <package name="ssh" extends="struts-default">
+        <action name="userAction_*" class="SSH框架整合.UserAction" method="{1}">
+            <result name="add">SSH两个测试页面/success.jsp</result>
+        </action>
+    </package>
+</struts>

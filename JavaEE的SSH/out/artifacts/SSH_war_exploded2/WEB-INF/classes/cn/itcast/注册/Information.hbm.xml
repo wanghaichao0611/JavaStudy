@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="cn.itcast.注册.Information" table="information" schema="test">
+        <id name="用户名" column="用户名"/>
+        <property name="密码" column="密码"/>
+        <property name="邮箱" column="邮箱"/>
+        <property name="电话" column="电话"/>
+    </class>
+</hibernate-mapping>
