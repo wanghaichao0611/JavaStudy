@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单标签的应用</title>
+</head>
+<body>
+<h1 align="left">用户注册</h1>
+<form name="" action="" method="post">
+    <table border="1">
+        <tr>
+            <td>用户名:</td>
+            <td><input type="text" name="userName" maxlength="10"></td>
+        </tr>
+        <tr>
+            <td>密 码</td>
+            <td><input type="password" name="userPassword"></td>
+        </tr>
+        <tr>
+            <td>确认密码</td>
+            <td><input type="password" name="userPassword1"></td>
+        </tr>
+        <tr>
+            <td>密码提示问题</td>
+            <td><input type="text" name="PasswordHint"></td>
+        </tr>
+        <tr>
+            <td>真实姓名</td>
+            <td><input type="text" name="name"></td>
+        </tr>
+        <tr>
+            <td>性 别</td>
+            <td><input type="radio" name="sex" value="男">男
+                <input type="radio" name="sex1" value="女">女
+            </td>
+        </tr>
+        <tr>
+            <td>出生日期:</td>
+            <td>
+                <select name="select" size="1">
+                    <option selected>1998</option>
+                    <option>1989</option>
+                    <option>1990</option>
+                    <option>1991</option>
+                    <option>1992</option>
+                    <option>1993</option>
+                    <option>1994</option>
+                    <option>1995</option>
+                    <option>1996</option>
+                    <option>1997</option>
+                </select>
+                年<select name="select" size="1">
+                <option selected>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+                <option>11</option>u
+                <option>12</option>
+            </select>
+            </td>
+        </tr>
+        <tr>
+            <td>证件类型:</td>
+            <td>
+                <select name="select">
+                    <option value="xsz">学生证
+                    <option value="sfz" selected>身份证
+                    <option value="jgz">军官证
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>证件号码:</td>
+            <td><input type="text" name="userID"></td>
+        </tr>
+        <tr>
+            <td><button type="submit" value="Sumbit">提交</button></td>
+            <td><button type="reset" value="Reset">取消</button></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
