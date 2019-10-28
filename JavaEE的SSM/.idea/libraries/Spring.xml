@@ -1,0 +1,30 @@
+<component name="libraryTable">
+  <library name="Spring" type="spring">
+    <CLASSES>
+      <root url="jar://E:/SSH的包/IDEA内置的三个版本包/Spring/spring-orm-4.3.18.RELEASE.jar!/" />
+      <root url="jar://E:/SSH的包/IDEA内置的三个版本包/Spring/spring-messaging-4.3.18.RELEASE.jar!/" />
+      <root url="jar://E:/SSH的包/IDEA内置的三个版本包/Spring/spring-tx-4.3.18.RELEASE.jar!/" />
+      <root url="jar://E:/SSH的包/IDEA内置的三个版本包/Spring/spring-oxm-4.3.18.RELEASE.jar!/" />
+      <root url="jar://E:/SSH的包/IDEA内置的三个版本包/Spring/spring-test-4.3.18.RELEASE.jar!/" />
+      <root url="jar://E:/SSH的包/IDEA内置的三个版本包/Spring/spring-jdbc-4.3.18.RELEASE.jar!/" />
+      <root url="jar://E:/SSH的包/IDEA内置的三个版本包/Spring/aopalliance-1.0.jar!/" />
+      <root url="jar://E:/SSH的包/IDEA内置的三个版本包/Spring/spring-jms-4.3.18.RELEASE.jar!/" />
+      <root url="jar://E:/SSH的包/IDEA内置的三个版本包/Spring/spring-instrument-4.3.18.RELEASE.jar!/" />
+      <root url="jar://E:/SSH的包/IDEA内置的三个版本包/Spring/spring-instrument-tomcat-4.3.18.RELEASE.jar!/" />
+      <root url="jar://E:/SSH的包/IDEA内置的三个版本包/Spring/spring-expression-4.3.18.RELEASE.jar!/" />
+      <root url="jar://E:/SSH的包/IDEA内置的三个版本包/Spring/spring-core-4.3.18.RELEASE.jar!/" />
+      <root url="jar://E:/SSH的包/IDEA内置的三个版本包/Spring/spring-context-support-4.3.18.RELEASE.jar!/" />
+      <root url="jar://E:/SSH的包/IDEA内置的三个版本包/Spring/spring-context-4.3.18.RELEASE.jar!/" />
+      <root url="jar://E:/SSH的包/IDEA内置的三个版本包/Spring/spring-beans-4.3.18.RELEASE.jar!/" />
+      <root url="jar://E:/SSH的包/IDEA内置的三个版本包/Spring/spring-aspects-4.3.18.RELEASE.jar!/" />
+      <root url="jar://E:/SSH的包/IDEA内置的三个版本包/Spring/spring-aop-4.3.18.RELEASE.jar!/" />
+      <root url="jar://E:/SSH的包/IDEA内置的三个版本包/Spring/commons-logging-1.2.jar!/" />
+      <root url="jar://E:/SSH的包/SpringMVC/spring-web-4.3.18.RELEASE.jar!/" />
+      <root url="jar://E:/SSH的包/SpringMVC/spring-webmvc-4.3.18.RELEASE.jar!/" />
+      <root url="jar://E:/SSH的包/SpringMVC/spring-webmvc-portlet-4.3.18.RELEASE.jar!/" />
+      <root url="jar://E:/SSH的包/SpringMVC/spring-websocket-4.3.18.RELEASE.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

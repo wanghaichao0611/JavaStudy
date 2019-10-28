@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="jackson-core-2.9.8-javadoc">
+    <CLASSES>
+      <root url="jar://E:/SSH的包/jackson-databind-2.9.6.jar!/" />
+      <root url="jar://E:/SSH的包/jackson-core-2.9.8.jar!/" />
+      <root url="jar://E:/SSH的包/jackson-annotations-2.9.8.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

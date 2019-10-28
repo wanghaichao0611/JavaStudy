@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mapper.TEmployeeTaskMapper">
+  <resultMap id="BaseResultMap" type="com.domain.TEmployeeTask">
+    <!--@mbg.generated-->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="emp_id" jdbcType="INTEGER" property="empId" />
+    <result column="task_id" jdbcType="INTEGER" property="taskId" />
+    <result column="task_name" jdbcType="VARCHAR" property="taskName" />
+    <result column="note" jdbcType="VARCHAR" property="note" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+     t_employee_task.id as 员工任务表的编号,t_employee_task.emp_id as 员工任务表的雇员编号,t_employee_task.task_id as 员工任务表的任务编号,t_employee_task.task_name as 员工人物表的任务名称,t_employee_task.note as 员工任务表的备注
+  </sql>
+  <select id="select" resultMap="BaseResultMap">
+    select <include refid="Base_Column_List"/>,<include refid="com.mapper.TTaskMapper.Base_Column_List"/>  from t_employee_task join t_task on t_employee_task.task_id = t_task.id
+  </select>
+  <insert id="insert" parameterType="com.domain.TEmployeeTask">
+    <!--@mbg.generated-->
+    insert into t_employee_task (id, emp_id, task_id, 
+      task_name, note)
+    values (#{id,jdbcType=INTEGER}, #{empId,jdbcType=INTEGER}, #{taskId,jdbcType=INTEGER}, 
+      #{taskName,jdbcType=VARCHAR}, #{note,jdbcType=VARCHAR})
+  </insert>
+
+</mapper>

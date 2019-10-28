@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mapper.TRoleMapper">
+  <resultMap id="BaseResultMap" type="com.domain.TRole">
+    <!--@mbg.generated-->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="role_name" jdbcType="VARCHAR" property="roleName" />
+    <result column="note" jdbcType="VARCHAR" property="note" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, role_name, note
+  </sql>
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.domain.TRole" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into t_role (role_name, note)
+    values (#{roleName,jdbcType=VARCHAR}, #{note,jdbcType=VARCHAR})
+  </insert>
+ <select id="countRole" parameterType="com.domain.PdCountRoleParams" statementType="CALLABLE">
+   {call count_role(#{roleName,mode=IN,jdbcType=VARCHAR},#{total,mode=OUT,jdbcType=INTEGER},#{execDate,mode=OUT,jdbcType=TIMESTAMP}    )}
+ </select>
+</mapper>

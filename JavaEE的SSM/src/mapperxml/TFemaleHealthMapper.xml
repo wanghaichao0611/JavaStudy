@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mapper.TFemaleHealthMapper">
+  <resultMap id="BaseResultMap" type="com.domain.TFemaleHealth">
+    <!--@mbg.generated-->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="emp_id" jdbcType="INTEGER" property="empId" />
+    <result column="heart" jdbcType="VARCHAR" property="heart" />
+    <result column="liver" jdbcType="VARCHAR" property="liver" />
+    <result column="spleen" jdbcType="VARCHAR" property="spleen" />
+    <result column="lung" jdbcType="VARCHAR" property="lung" />
+    <result column="kindey" jdbcType="VARCHAR" property="kindey" />
+    <result column="prostate" jdbcType="VARCHAR" property="prostate" />
+    <result column="note" jdbcType="VARCHAR" property="note" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    t_female_health.id as 女性健康表的编号, t_female_health.emp_id as 女性健康表的雇员编号, t_female_health.heart as 女性健康表的心检查, t_female_health.liver as 女性健康表的肝检查, t_female_health.spleen as 女性健康表的脾检查, t_female_health.lung as 女性健康表的肺检查, t_female_health.kindey as 女性健康表肾检查, t_female_health.prostate as 女性健康表的子宫检查, t_female_health.note as 女性健康表的备注
+  </sql>
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.domain.TFemaleHealth" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into t_female_health (emp_id, heart, liver, 
+      spleen, lung, kindey, 
+      prostate, note)
+    values (#{empId,jdbcType=INTEGER}, #{heart,jdbcType=VARCHAR}, #{liver,jdbcType=VARCHAR}, 
+      #{spleen,jdbcType=VARCHAR}, #{lung,jdbcType=VARCHAR}, #{kindey,jdbcType=VARCHAR}, 
+      #{prostate,jdbcType=VARCHAR}, #{note,jdbcType=VARCHAR})
+  </insert>
+</mapper>
