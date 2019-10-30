@@ -25,11 +25,11 @@
 -
 12.数据库和Oracle均是学校书籍：  Mysql参照的百度阅读胡杨的至简Mysql和(美版)高性能Mysql
 -
-13.前端技术:       H5C3JS疯狂讲义，(美版)JavaScript,锋利的Jquery，清华大学出版社的Vue,前端水平一般，因为看的不多，基本的都记下来了,Vue正在学习.
+13.前端技术:       H5C3JS疯狂讲义，(美版)JavaScript,锋利的Jquery，清华大学出版社的Vue,基本的都记下来了,Vue正在学习.
 -
 14.Netty网络编程:    参照的是阿里的Netty实战指南(Netty5.0已被放弃)和(美版)Netty实战,还在学习中.
 -
 15.Spring底层实现：   参照的是Spring 5的核心原理和30个类的手写实战，有空就看有空就学.
 -
-16.Nosql技术：         Nosql都是买的书籍中带的学习的，Redis较熟悉，Mongodb只会用.
+16.Nosql技术：         Nosql都是买的书籍中带的学习的，Redis较熟悉，Mongodb会用.
 -
