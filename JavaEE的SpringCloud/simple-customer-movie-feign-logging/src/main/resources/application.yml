@@ -1,0 +1,17 @@
+server:
+  port: 8010
+
+spring:
+  application:
+    name: whc-customer-user
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true   #表示将自己的ip注册到Eureka Server上，若不配置或设置成false，表示提下哦那个的hostname到Server上
+
+logging:
+  level:
+    #将Feign接口的日志级别设置成DEBUG，因为Feign的Logger.Level只对DEBUG做出响应
+    com.feign.UserFeignClient: debug

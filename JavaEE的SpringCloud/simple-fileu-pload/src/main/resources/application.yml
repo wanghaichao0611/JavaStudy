@@ -1,0 +1,15 @@
+server:
+  port: 8050
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+spring:
+  application:
+    name: whc-file-upload
+  http:
+    multipart:
+      max-file-size: 2000Mb             #默认为1M
+      max-request-size: 2500Mb          #默认为10M

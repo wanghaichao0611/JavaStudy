@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.whc.cloud</groupId>
+    <artifactId>spring-cloud-docker</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>Eureka-server</module>
+        <module>Eureka-Server-Ha</module>
+        <module>simple-customer-movie</module>
+        <module>simple-provider-user</module>
+        <module>simple-provider-user-two</module>
+        <module>simple-customer-movie-ribbon</module>
+        <module>simple-customer-movie-ribbon-java</module>
+        <module>simple-customer-movie-ribbon-properties</module>
+        <module>simple-customer-movie-ribbon-without-eureka</module>
+        <module>Eureka-server-security</module>
+        <module>simple-provider-user-metadata</module>
+        <module>simple-customer-movie-metadata</module>
+        <module>simple-customer-movie-feign</module>
+        <module>simple-customer-movie-feign-java</module>
+        <module>simple-provider-user-with-auth</module>
+        <module>simple-customer-movie-feign-manual</module>
+        <module>simple-customer-movie-feign-logging</module>
+        <module>simple-customer-movie-ribbon-hystrix</module>
+        <module>simple-customer-movie-feign-hystrix-fallback</module>
+        <module>simple-customer-movie-feign-hystrix-fallback-factory</module>
+        <module>simple-customer-movie-feign-hystrix-fallback-stream</module>
+        <module>simple-customer-movie-feign-hystrix-fallback-stream-turbine</module>
+        <module>simple-hystrix-turbine</module>
+        <module>simple-hystrix-dashboard</module>
+        <module>simple-hystrix-turbine</module>
+        <module>simple-customer-movie-ribbon-hystrix-turbine-mq</module>
+        <module>simple-hystrix-turbine-mq</module>
+        <module>simple-getway-zuul</module>
+        <module>simple-fileu-pload</module>
+        <module>simple-getway-zuul-filter</module>
+        <module>simple-getway-zuul-fallback</module>
+    </modules>
+</project>
