@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.Mapper1.BookMapper">
+  <resultMap id="BaseResultMap" type="com.entity.Book">
+    <!--@mbg.generated-->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="author" jdbcType="VARCHAR" property="author" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, `name`, author
+  </sql>
+  <insert id="insert" parameterType="com.entity.Book">
+    insert into book(name,author) values (#{name,jdbcType=VARCHAR} ,#{author,jdbcType=VARCHAR} )
+  </insert>
+  <delete id="deleteByPrimaryKey" parameterType="integer">
+    delete from book where id=#{id}
+  </delete>
+  <update id="updateByPrimaryKey" parameterType="com.entity.Book">
+    update book set name=#{name,jdbcType=VARCHAR} ,author=#{author}  where id=#{id}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="integer" resultType="com.entity.Book">
+    select * from book where id=#{id}
+  </select>
+</mapper>
