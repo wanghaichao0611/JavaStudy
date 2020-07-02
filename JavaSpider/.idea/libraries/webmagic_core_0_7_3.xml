@@ -1,0 +1,30 @@
+<component name="libraryTable">
+  <library name="webmagic-core-0.7.3">
+    <CLASSES>
+      <root url="jar://D:/爬虫/lib2/webmagic-core-0.7.3.jar!/" />
+      <root url="jar://D:/爬虫/lib2/webmagic-extension-0.7.3.jar!/" />
+      <root url="jar://D:/爬虫/lib2/commons-lang3-3.1.jar!/" />
+      <root url="jar://D:/爬虫/lib2/asm-5.0.4.jar!/" />
+      <root url="jar://D:/爬虫/lib2/httpclient-4.5.2.jar!/" />
+      <root url="jar://D:/爬虫/lib2/commons-collections-3.2.2.jar!/" />
+      <root url="jar://D:/爬虫/lib2/xsoup-0.3.1.jar!/" />
+      <root url="jar://D:/爬虫/lib2/httpcore-4.4.4.jar!/" />
+      <root url="jar://D:/爬虫/lib2/json-path-2.4.0.jar!/" />
+      <root url="jar://D:/爬虫/lib2/commons-pool2-2.4.2.jar!/" />
+      <root url="jar://D:/爬虫/lib2/assertj-core-1.5.0.jar!/" />
+      <root url="jar://D:/爬虫/lib2/commons-codec-1.9.jar!/" />
+      <root url="jar://D:/爬虫/lib2/jsoup-1.10.3.jar!/" />
+      <root url="jar://D:/爬虫/lib2/json-smart-2.3.jar!/" />
+      <root url="jar://D:/爬虫/lib2/hamcrest-core-1.3.jar!/" />
+      <root url="jar://D:/爬虫/lib2/fastjson-1.2.28.jar!/" />
+      <root url="jar://D:/爬虫/lib2/accessors-smart-1.2.jar!/" />
+      <root url="jar://D:/爬虫/lib2/commons-logging-1.2.jar!/" />
+      <root url="jar://D:/爬虫/lib2/commons-io-1.3.2.jar!/" />
+      <root url="jar://D:/爬虫/lib2/log4j-1.2.17.jar!/" />
+      <root url="jar://D:/爬虫/lib2/slf4j-api-1.7.6.jar!/" />
+      <root url="jar://D:/爬虫/lib2/slf4j-log4j12-1.7.6.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
