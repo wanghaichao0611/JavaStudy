@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<config>
+    <abstractClassName>creationalPatterns.abstractFactoryPattern.abstractFactoryExample.SummerSkinFactory</abstractClassName>
+</config>
